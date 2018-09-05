@@ -1,0 +1,100 @@
+.top-menu{
+    width: 100%;
+    position: fixed;
+    direction: rtl;
+    height: 44px;
+    box-shadow: rgba(0, 0, 0, 0.1) 3px 8px 10px;
+    color: black;
+}
+.menu-link{    
+    direction: rtl;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+nav a {
+    -webkit-transition: all 450ms ease-in-out;
+    transition: all 450ms ease-in-out;
+}
+.menu-link:hover {
+    background-color: rgb(114, 114, 114);
+}
+.snapp-family-img {
+    text-align: center;
+}
+.nav {
+    height: 40px;
+    margin-top: 48px;
+}
+body {
+    position: relative;
+}
+.example{
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgb(50, 78, 70);
+    padding-bottom: 20px;
+
+}
+.snapp-family, .snapp-eco {
+    margin-top: 30px;
+}
+.big-div {
+    direction: rtl;
+}
+.big-div p {
+    margin-top: 30px;
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+}
+.h1-title {
+    text-align: center;
+    margin-top: 70px;
+    background-color: rgb(50, 78, 70);
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.bold {
+    direction: rtl;
+    text-align: right;
+    font-size: 20px;
+    margin-right: 22px;
+    padding-bottom: 10px;
+}
+.address {
+    direction: rtl;
+    text-align: right;
+    margin-right: 200px;
+    margin-top: 80px;
+    padding-bottom: 40px;
+}
+.madarek {
+    text-align: right;
+    direction: rtl;
+    margin: 80px 130px;
+    font-size: 17px;
+}
+.pics {
+    display: flex;
+    direction: rtl;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.aa{
+    float: left;
+}
+.pic1 {
+    float: right;
+}
+.pic2 {
+    float: left;
+}
+p {
+    color: black;
+}

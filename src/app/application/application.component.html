@@ -1,0 +1,84 @@
+<navbar></navbar>
+<body>
+  <form class="form1" [formGroup]="loginForm" (ngSubmit)="login()" @form>
+    <div class="form-group" *ngIf="show && show1">
+
+      <button class="btn btn-outline-dark google">ورود با حساب گوگل</button>
+
+      <div class="form">
+        <div class="email-div">
+          <input formControlName="emailLogin" class="form-control form-control-lg" type="email" placeholder="آدرس ایمیل *">
+          <div class="alert alert-danger" *ngIf="emailLogin.touched && emailLogin.invalid">
+            <div *ngIf="emailLogin.errors.required">ایمیل شما ضروری است</div>
+            <div *ngIf="emailLogin.errors.cannotContainSpaceEmail">ایمیل شما اشتباه است</div>
+          </div>
+        </div>
+
+
+        <div class="password-div">
+          <input formControlName="passwordLogin" type="password" class="form-control form-control-lg" placeholder="گذر واژه *">
+          <div class="alert alert-danger" *ngIf="passwordLogin.touched && passwordLogin.invalid">
+            <div *ngIf="passwordLogin.errors.required">گذر واژه شما ضروری است</div>
+            <div *ngIf="passwordLogin.errors.minlength">گذر واژه شما باید حداقل ۶ کاراکتر باشد</div>
+          </div>
+        </div>
+
+
+          <button class="btn btn-block btn-outline-dark" [disabled]="!(emailLogin.touched && !emailLogin.invalid) || !(passwordLogin.touched && !passwordLogin.invalid)" (click)="postLogin()">ورود</button>
+          <div class="havent">
+            <p class="signupnow" (click)="show = !show">اگر عضو نیستید ثبت نام کنید</p>
+            <p class="signupnow" (click)="show1 = !show1">رمز عبورم را فراموش کرده ام</p>
+          </div>  
+        </div>
+      </div>  
+  </form>
+
+
+  <form class="form2" *ngIf="!show1">
+    <div class="form-group">
+      <div class="form">
+        <input type="email" class="form-control form-control-lg" placeholder="آدرس ایمیل *"><i class="material-icon"></i>
+        <button class="btn btn-block btn-outline-dark" style="margin-top: 5px;">ارسال</button>
+      </div>
+    </div>
+  </form>
+
+
+  <form class="form2" *ngIf="!show" [formGroup]="signupForm" (ngSubmit)="signup()" @form>
+    <div class="form-group">
+
+      <button class="btn btn-outline-dark google">ورود با حساب گوگل</button>
+
+
+      <div class="form">
+          <div class="name-div">
+              <input formControlName="nameSignup" class="form-control form-control-lg" type="text" placeholder="نام کامل(به فارسی)">
+              <div class="alert alert-danger" *ngIf="nameSignup.touched && nameSignup.invalid">
+                <div *ngIf="nameSignup.errors.required">نام شما ضروری است</div>
+                <div *ngIf="nameSignup.errors.minlength">اسم شما باید بیشتر از چهار کاراکتر باشذ</div>
+                <div *ngIf="nameSignup.errors.cannotContainSpaceName">بدون فاصله وارد کنید</div>
+              </div>
+            </div>
+        <div class="email-div">
+          <input formControlName="emailSignup" class="form-control form-control-lg" type="email" placeholder="آدرس ایمیل *">
+          <div class="alert alert-danger" *ngIf="emailSignup.touched && emailSignup.invalid">
+            <div *ngIf="emailSignup.errors.required">ایمیل شما ضروری است</div>
+            <div *ngIf="emailSignup.errors.cannotContainSpaceEmail">ایمیل شما اشتباه است</div>
+          </div>
+        </div>
+
+
+        <div class="password-div">
+          <input formControlName="passwordSignup" type="password" class="form-control form-control-lg" placeholder="گذر واژه *">
+          <div class="alert alert-danger" *ngIf="passwordSignup.touched && passwordSignup.invalid">
+            <div *ngIf="passwordSignup.errors.required">گذر واژه شما ضروری است</div>
+            <div *ngIf="passwordSignup.errors.minlength">گذر واژه شما باید حداقل ۶ کاراکتر باشد</div>
+          </div>
+        </div>
+
+
+          <button class="btn btn-block btn-outline-dark" [disabled]="((nameSignup.touched && nameSignup.invalid) || (emailSignup.touched && emailSignup.invalid)) || !(passwordSignup.touched && !passwordSignup.invalid)" (click)="postSignup()">ثبت نام</button>
+        </div>
+      </div>  
+  </form>
+</body>

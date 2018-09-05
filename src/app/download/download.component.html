@@ -1,0 +1,28 @@
+<navbar></navbar>
+<div>
+<div class="back-img"></div>
+<div class="body-div" @wellcome>
+    <h1>سفری آسان و مطمئن هرروز</h1>
+    <p class="num-lab">شماره خود را وارد کنید</p>
+    <div class="form">
+        <input class="form-control form-control-lg" type="text" placeholder="شماره خود را وارد کنید" #phoneNum>
+      <button type="button" class="send-but btn btn-outline-dark" (click)="sendSms(phoneNum)">ارسال لینک دانلود</button>
+    </div>
+    <div class="Apps container">
+      <div class="row">
+        <a class="col" href="https://app.adjust.com/8jm45r?redirect=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcab.snapp.passenger.play" target="_blank">
+          <img src="../../assets/img/google-play-badge.svg" title="دانلود از گوگل&zwnj;پلی" alt="دانلود از گوگل&zwnj;پلی">
+        </a>
+        <a class="col" href="/ios-tutorial" target="_blank">
+          <img class="col" src="../../assets/img/snapp_ios.svg" title="دانلود نسخه iOS" alt="دانلود نسخه iOS">
+        </a><br><br>
+        <a class="col" href="https://app.adjust.com/epw941?redirect=https%3A%2F%2Fcafebazaar.ir%2Fapp%2Fcab.snapp.passenger%2F%3Fl%3Dfa" target="_blank">
+          <img src="../../assets/img/bazaar.svg" title="دانلود از بازار" alt="دانلود از بازار">
+        </a>
+        <a class="col-sm" routerLink="/application">
+          <img src="../../assets/img/snapp_pwa.svg" title="نسخه تحت وب اسنپ" alt="نسخه تحت وب اسنپ">
+        </a>
+      </div>  
+    </div>
+  </div>  
+</div>

@@ -1,0 +1,51 @@
+img {
+    width: 100%;
+}
+.div-body {
+    text-align: center;
+    direction: rtl;
+    display: block;
+    width: 100%;
+}
+.texts {
+    margin: 50px auto;
+    width: 60%;
+    display: block;
+}
+.texts h1 {
+    text-align: center;
+    float: right;
+    display: block;
+}
+.texts p {
+    float: left;
+    margin-top: 30px;
+    font-size: 20px;
+    display: block;
+}
+.tech {
+    display: block;
+    text-align: center;
+    direction: rtl;
+    width: 60%;
+    margin: 0px auto;
+}
+.tech h2 {
+    text-align: center;
+    float: right;
+    display: block;
+}
+.tech h3 {
+    text-align: center;
+    float: right;
+    margin-top: 30px;
+    display: block;
+}
+.explain {
+    text-align: center;
+    float: right;
+    display: block;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 100%;
+}

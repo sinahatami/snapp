@@ -1,0 +1,80 @@
+body{
+    padding-top: 30px;
+}
+agm-map {
+    height: 300px;
+}
+.call-me{
+    color: rgb(49, 48, 48);
+    font-family: KacstTitle;
+}
+.title-head{
+    font-family: KacstTitle;
+}
+.div-body{
+    margin: 0 auto;
+    padding: 100px 100px 150px;
+    width: 100%;
+    max-width: 70%;
+    box-shadow: 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    margin-top: 40px;
+    background-color:rgb(231, 228, 228);
+    height: auto;
+    display: block;
+    direction: rtl;
+    text-align: center;
+}
+.right-side{
+    display: inline-block;
+    text-align: right;
+    direction: rtl;
+    width: 50%;
+    font-family: KacstOffice;
+    font-size: 24px;
+}
+.left-side{
+    float: left;
+    direction: rtl;
+    text-align: right;
+    width: 50%;
+}
+.each-head{
+    margin-top: 70px;
+}
+.btn {
+    display: block;
+    text-align: center;
+    direction: rtl;
+    margin-top: 40px;
+    margin-right: 40%;
+}
+.form{
+    margin-top: 60px;
+}
+label {
+    margin-top: 25px;
+    padding-bottom: 25px;
+    cursor: pointer;
+}
+input{
+    padding: 20px;
+}
+@media screen and (max-width: 1750px){
+    .div-body {
+        margin-right: 70px;
+        float: right;
+        display: grid;
+        text-align: center;
+        width: 1200px
+    }
+}
+@media screen and (max-width: 800px){
+    .left-side {
+        width: 170px;
+        margin-right: -40px;
+    }
+    .right-side {
+        margin-right: -40px;
+        font-size: 25px;
+    }
+}

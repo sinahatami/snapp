@@ -1,0 +1,62 @@
+<navbar></navbar> 
+<body>
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+  <div class="div-body">
+    <div class="right-side">
+      <h1 class="call-me">تماس با ما</h1>
+      <div class="each-head">
+        <h3 class="title-head">دفتر مرکزی</h3>
+        <p class="address">آدرس:</p>
+        <p class="tell">تلفن پشتیبانی: </p>
+        <p class="call-back">فکس:</p>
+        <p class="email">پست الکترونیکی: </p>
+      </div>
+      <div class="each-head">
+        <h3 class="title-head">دفتر امور کاربران راننده و مسافر در تهران</h3>
+        <p class="address">آدرس:</p>
+        <p class="tell">تلفن پشتیبانی: </p>
+        <p class="snapp-box">شماره تماس اسنپ باکس: </p>
+        <p>خدمات مربوط به مسافران به صورت غیر حضوری عرضه می‌شود.</p>
+      </div>
+      <div class="each-head">
+        <h3 class="title-head">دفتر اسنپ‌باکس و اسنپ‌بایک در تهران</h3>
+        <p class="address">نشانی: اشرفی اصفهانی، بالاتر از مرزداران، کوچه بی‌نظیر (سادات)، شماره ۱۹ (مجتمع تجاری امین)، طبقه اول</p>
+        <p class="tell">شماره تماس: </p>
+      </div>
+      <div class="each-head">
+      <h3 class="title-head">دفتر توسعه کسب‌وکار پاسخگویی به سازمان‌ها و شرکت‌ها</h3>
+      <p>اگر قصد دارید از اسنپ برای امور حمل‌ونقلی کسب‌وکار کوچک یا بزرگ خود استفاده کنید با دفتر توسعه کسب‌وکار ما تماس بگیرید، تا راهکارهای سازمانی خود را به شما معرفی کنیم. در این بخش، بسته به نیازهای سازمان خود می‌توانید یکی از دو راهکار پنل یا کد سازمانی را جهت سهولت حمل‌ونقل در کسب‌وکارتان انتخاب کنید.</p>
+      <p class="email">ایمیل:</p>
+      </div>
+    </div>
+    <div class="left-side">
+      <form class="form-group" [formGroup]="helpForm">
+        <h2>چگونه می‌توانیم به شما کمک کنیم؟</h2>
+        <div class="form">
+          <label for="name">نام و نام خانوادگی</label>
+          <input formControlName="name" class="form-control" type="text" id="name" placeholder="نام خود را وارد کنید">
+          <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+            <div *ngIf="name.errors.required">اسم ضروری است</div>
+          </div>
+          <label for="email">پست الکترونیکی</label>
+          <input formControlName="email" class="form-control" type="email" id="email" placeholder="پست الکترویکی خود را وارد کنید">
+          <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+            <div *ngIf="email.errors.required">ایمیل ضروری است</div>
+            <div *ngIf="email.errors.cannotContainSpaceEmail">ایمیل اشتباه است</div>
+          </div>
+          <label for="title">موضوع</label>
+          <input class="form-control" type="text" id="title" placeholder="موضوع خود راوارد کنید">
+          <label for="cm">پیام شما</label>
+          <input formControlName="comment" class="form-control" type="text" id="cm" placeholder="پیام شما">
+          <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">
+            <div *ngIf="comment.errors.required">لطفا نظرتان را وارد کنید</div>
+          </div>
+          <button (click)=post() class="btn btn-outline-dark" [disabled]="((name.touched && name.invalid) || (email.touched && email.invalid)) || !(comment.touched && !comment.invalid)">ارسال</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

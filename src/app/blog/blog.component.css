@@ -1,0 +1,41 @@
+.top-head{
+    direction: rtl;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 80px;
+    cursor: pointer;
+}
+.div-body{
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+img{
+    width: 50rem;
+    margin-top: 30px
+}
+.paras{
+    max-width: 50rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
+    font-size: 20px;
+    color: rgb(95, 95, 95);
+}
+.counti{
+    margin-top: 30px;
+}
+.each-post{
+    padding-bottom: 70px;
+}
+.paras:hover{
+    color: #ffffff;
+}
+@media screen and (max-width:900px){
+    img{
+        width: 100%
+    }
+}
+h1 {
+    color: white;
+}

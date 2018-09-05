@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: rgb(226, 226, 226);" @navbar>
+    <a class="navbar-brand" href="#">اسنپ</a>
+    <button (click)="toggleCollapse()" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <ul class="navbar-nav" *ngIf="show1">
+        <li class="nav-item" routerLinkActive="active current">
+          <a class="nav-link" id="hover" routerLink="/blog">بلاگ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLinkActive="active current" id="hover" routerLink="/career">فرضت شغلی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLinkActive="active current" routerLink="/about">درباره ما</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLinkActive="active current" routerLink="/content">تماس با ما</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLink="/drivers">پیوستن به ناوگان اسنب</a>
+        </li>
+      </ul>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active current">
+          <a class="nav-link" id="hover" routerLink="/blog">بلاگ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLinkActive="active current" routerLink="/career">فرضت شغلی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLinkActive="active current" routerLink="/about">درباره ما</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLinkActive="active current" routerLink="/content">تماس با ما</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="hover" routerLinkActive="active current" routerLink="/drivers">پیوستن به ناوگان اسنپ</a>
+        </li>
+      </ul>
+    </div>
+    <button routerLinkActive="active current" type="button" class="btn btn-outline-dark snapp" routerLink="/download" (click)="show = !show">استفاده از اسنپ</button>
+  </nav>

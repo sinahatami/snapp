@@ -1,0 +1,109 @@
+<navbar></navbar>
+<div>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="../../assets/img/slider2.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../../assets/img/slider3.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../../assets/img/slider4.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <h1 class="h1">ویژگی های اسنپ</h1>
+
+
+
+  <div class="wrapper">
+    <div class="right-side">
+      <div [class.active]="changePage == 'p1'" class="bt shadow-lg p-4 mb-6 rounded" (click)="changePage = 'p1'">امنیت و آسایش</div>
+      <div [class.active]="changePage == 'p2'" class="bt shadow-lg p-4 mb-6 rounded" style="margin-top: 30px;" (click)="changePage = 'p2'">ویژگی‌‌ها و قابلیت‌ها</div>
+      <div [class.active]="changePage == 'p3'" class="bt shadow-lg p-4 mb-6 rounded" style="margin-top: 30px;" (click)="changePage = 'p3'">خدمات متنوع</div>
+      <div [class.active]="changePage == 'p4'" class="bt shadow-lg p-4 mb-6 rounded" style="margin-top: 30px;" (click)="changePage = 'p4'">راهکارهای سازمانی</div>
+    </div>
+
+
+    <div class="left-side" [ngSwitch]="changePage">
+        <div *ngSwitchCase="'p1'">
+          <div class="texts">
+            <h1 class="p-h1">امنیت در اولویت است</h1>
+            <div class="explains">
+              <h3 class="para">امنیت کاربران اولویت اصلی اسنپ است. به همین منظور تلاش می‌کنیم قابلیت‌هایی در جهت امنیت و آسایش بیشتر سفرهای خود به وجود آوریم. قابلیت‌هایی مانند:</h3>
+              <ul class="lists">
+                <li>احراز هویت کاربران راننده</li>
+                <li>ثبت اطلاعات کاربر راننده</li>
+                <li>بررسی خودرو کاربر راننده</li>
+                <li>عکس کاربر راننده</li>
+                <li>امکان به اشتراک گذاشتن اطلاعات و نقشه مسیر با آشنایان</li>
+                <li>پنهان‌سازی شماره تلفن کاربران راننده و مسافر در حین تماس</li>
+              </ul>
+            </div>  
+          </div>  
+        </div>
+
+
+
+        <div *ngSwitchCase="'p2'" class="texts">
+          <h1 class="p-h1">هوشمند سفر کنید</h1>
+          <div class="explains">
+            <h3 class="para">ویژگی‌های اسنپ همه آن چیزی است که یک شهروند هوشمند به آن نیاز دارد. قابلیت‌هایی مانند:</h3>
+            <ul class="lists">
+                <li>صرفه‌جویی در هزینه و زمان</li>
+                <li>حق انتخاب در نحوه پرداخت هزینه سفر (آنلاین یا نقدی)</li>
+                <li>امکان انجام سفر رفت‌وبرگشت یا دو مقصده</li>
+                <li>امکان انتخاب مدت زمان توقف در مسیر</li>
+                <li>امکان ذخیره آدرس‌های منتخب در اپلیکیشن</li>
+                <li>پنهان‌سازی شماره تلفن کاربران راننده و مسافر در حین تماس</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div *ngSwitchCase="'p3'" class="texts">
+            <h1 class="p-h1">چند سرویس در یک اپلیکیشن</h1>
+            <div class="explains">
+              <h3 class="para">کاربران با نصب یک اپلیکیشن می‌توانند از سرویس‌های مختلفی استفاده کنند. سرویس‌هایی مانند:</h3>
+              <ul class="lists">
+                  <li>اسنپ اکو: سفری مقرون‌به‌صرفه و با کیفیت مطلوب</li>
+                  <li>حق انتخاب در نحوه پرداخت هزینه سفر (آنلاین یا نقدی)</li>
+                  <li>اسنپ‌رُز: سفر بانوان و خانواده‌ها، با هم‌راهان خانم</li>
+                  <li>اسنپ‌باکس: حمل بسته و مرسولات با موتورسیکلت</li>
+                  <li>اسنپ‌بایک: جابه‌جایی مسافران با موتورسیکلت</li>
+              </ul>
+            </div>
+          </div>
+
+
+          
+          <div *ngSwitchCase="'p4'" class="texts">
+              <h1 class="p-h1">نیاز یک سازمان هوشمند</h1>
+              <div class="explains">
+                <h3 class="para">اسنپ راهکارهایی برای هوشمندسازی حمل‌ونقل کارکنان سازمان‌ها و شرکت‌ها دارد. خدماتی مانند:</h3>
+                <ul class="final-part">
+                    <li>پنل سازمانی: با ثبت‌نام در پنل سازمانی، از طریق یک صفحه وب می‌توان از تمام سرویس‌های اسنپ استفاده کرد. استفاده همزمان از همه سرویس‌ها، مدیریت بهتر سفرها، شفاف‌سازی هزینه‌های حمل‌ونقل سازمانی و گزارش‌گیری قابل اعتماد از قابلیت‌های این پنل است.</li><br><br>
+                    <li>کد سازمانی: در این حالت، یک کد سازمانی مخصوص برای سازمان و تمام اعضای مجموعه ایجاد می‌شود. به این ترتیب ریز گزارش‌ سفرهای کارمندان به صورت هفتگی برای مسئول سازمان ارسال می‌شود.</li>
+                </ul>
+              </div>
+            </div>
+ </div>
+</div>

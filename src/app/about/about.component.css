@@ -1,0 +1,24 @@
+.img-about{
+    width: 100%;
+}
+.div-body{
+    direction: rtl;
+    text-align: center;
+    margin: auto;
+    width: 900px;
+    margin-top: 50px;
+    height: 500px;
+    color: white;
+}
+h1{
+    text-align: right;
+}
+p {
+    font-size: 28px;
+    margin-top: 30px;
+}
+@media screen and (max-width: 1910px){
+    .div-body{
+        display: inline;
+    }
+}

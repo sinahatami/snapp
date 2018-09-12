@@ -22,11 +22,11 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@fortawesome/fontawesome-free": "^5.2.0",
-    "ngx-spinner": "^6.1.2",
     "@ng-bootstrap/ng-bootstrap": "^3.0.0",
     "@types/googlemaps": "^3.30.12",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
+    "ngx-spinner": "^6.1.2",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

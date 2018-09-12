@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { CommonModule } from '@angular/common';
-
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ import { PostService } from './post.service';
     BrowserAnimationsModule,
     HttpClientModule,
     CommonModule,
+    NgxSpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_KEY'
     }),
